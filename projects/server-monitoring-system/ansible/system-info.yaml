@@ -1,0 +1,24 @@
+---
+- name: System Info
+  hosts: all
+
+  tasks:
+  - name: Disk Usage
+    shell: df -h
+    register: disk
+
+  - name: Memory Usage
+    shell: free -h
+    register: memory
+
+  - name: CPU Usage
+    shell: top -bn 1 | grep 'Cpu'
+    register: cpu
+
+  - name: System Info
+    debug:
+      msg:
+        Host: "{{ inventory_hostname }}"
+        Disk: "{{ disk.stdout_lines }}"
+        Memory: "{{ memory.stdout_lines }}"
+        CPU: "{{ cpu.stdout }}"
