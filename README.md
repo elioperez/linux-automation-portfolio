@@ -34,8 +34,8 @@ Collects `/var/log/secure`, detects failed SSH login attempts, and generates inc
 
 ### Infrastructure
 
-- 1 Control Node
-- Multiple CentOS Linux managed nodes
+- 1 Control Node --> Rocky Linux
+- 4 Multiple CentOS Linux managed nodes
 - SSH key authentication
 - Ansible inventory and playbooks
 
