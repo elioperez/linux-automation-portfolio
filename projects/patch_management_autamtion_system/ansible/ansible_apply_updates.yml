@@ -1,0 +1,14 @@
+---
+- name: Apply updates
+  hosts:
+  - ungrouped
+  - db
+  become: yes
+
+  tasks:
+  - name: Applying updates
+    dnf:
+      name: "*"
+      state: latest
+      update_only: yes
+
