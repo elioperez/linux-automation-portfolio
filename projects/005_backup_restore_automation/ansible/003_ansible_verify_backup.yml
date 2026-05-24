@@ -1,0 +1,15 @@
+---
+- name: Verify backup archive
+  hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Verify archive
+    shell: tar -tzf {{ item }}
+    register: verify_output
+    with_fileglob:
+    - "./backups/*.tar.gz"
+
+  - name: Show verification
+    debug:
+      var: verify_output.results

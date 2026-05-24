@@ -1,0 +1,11 @@
+---
+- name: Fetch backups
+  hosts: servers
+  become: yes
+
+  tasks:
+  - name: Download backup archive
+    fetch:
+      src: /tmp/{{ inventory_hostname }}_backup.tar.gz
+      dest: ./backups/
+      flat: yes

@@ -9,3 +9,4 @@
       path: /etc
       dest: "/tmp/{{ inventory_hostname }}_backup.tar.gz"
       format: gz
+      remove: no

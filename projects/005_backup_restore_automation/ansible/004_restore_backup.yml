@@ -1,0 +1,11 @@
+---
+- name: Restore backup archive
+  hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Extract backup
+    unarchive:
+      src: ./backups/client1_backup.tar.gz
+      dest: ./restored/
+      remote_src: no
