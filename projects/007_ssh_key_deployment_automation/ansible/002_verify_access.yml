@@ -1,0 +1,12 @@
+---
+- name: Verify SSH access
+  hosts: servers
+
+  tasks:
+  - name: Show hostname
+    shell: hostname
+    register: host
+
+  - name: Display hostname
+    debug:
+      msg: "{{ host.stdout_lines }}"

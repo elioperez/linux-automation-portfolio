@@ -1,0 +1,10 @@
+---
+- name: Deploy ssh keys
+  hosts: servers
+
+  tasks:
+  - name: Install public key
+    authorized_key:
+      user: elio
+      state: present
+      key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
