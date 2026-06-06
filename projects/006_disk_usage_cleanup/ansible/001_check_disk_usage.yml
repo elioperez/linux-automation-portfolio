@@ -1,0 +1,12 @@
+---
+- name: Check disk usage
+  hosts: servers
+
+  tasks:
+  - name: Show disk usage
+    shell: df -h
+    register: disk_usage
+
+  - name: Display disk usage
+    debug:
+      msg: "{{ inventory_hostname }} --> {{ disk_usage.stdout }}"

@@ -1,0 +1,7 @@
+---
+- name: Cleanup temporary files
+  hosts: servers
+
+  tasks:
+  - name: Removed temporary files
+    shell: find /tmp -type f -mtime +3 -delete

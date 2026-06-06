@@ -1,0 +1,7 @@
+---
+- name: Cleanup old files...
+  hosts: servers
+
+  tasks:
+  - name: Removed old logs
+    shell: find /var/log -type f -name "*.log" -mtime +7 -delete
