@@ -8,11 +8,15 @@ Objectives
 •	Improve consistency across managed hosts.
 •	Support future Ansible automation projects.
 
-Managed Nodes
-•	Client1
-•	Client2
-•	Client3
-•	Client4
+Managed Linux Servers
+
+| Host     | IP Address     |
+| -------- | -------------- |
+| Server01 | 192.168.56.118 |
+| Server02 | 192.168.56.122 |
+| Server03 | 192.168.56.123 |
+| Server04 | 192.168.56.124 |
+
 All systems were deployed in a virtualized lab environment and configured for remote administration.
 
 Technologies Used
@@ -35,15 +39,6 @@ Skills Demonstrated
 •	Remote Server Administration
 •	Automation Best Practices
 
-Skills Demonstrated
-•	Linux System Administration
-•	SSH Administration
-•	Public Key Authentication
-•	Infrastructure Automation
-•	Ansible Playbooks
-•	Inventory Management
-•	Remote Server Administration
-•	Automation Best Practices
 
 Author
 Elio Perez Calzadilla
