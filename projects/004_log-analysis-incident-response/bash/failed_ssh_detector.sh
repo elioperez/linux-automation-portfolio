@@ -1,14 +1,15 @@
 !#/bin/bash
 
-while read server
-
-echo "================================"
-echo "FAILED SSH LOGINS on ${server}"
-echo "Generated: $(date)"
-echo "================================="
+while  read  -r server
 
 do
-  sudo ssh -n ${server} '
-  grep "Failed password" /var/log/secure
+  echo "================================"
+  echo "FAILED SSH LOGINS on ${server}"
+  echo "Generated: $(date)"
+  echo "================================="
+
+
+  ssh -n ${server} '
+   sudo grep "Failed password" /var/log/secure
   '
 done < servers.txt
