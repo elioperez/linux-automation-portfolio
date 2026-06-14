@@ -24,26 +24,25 @@ Creates users, manages services, and deploys SSH keys using Bash, Python, and An
 Collects `/var/log/secure`, detects failed SSH login attempts, and generates incident summaries.
 
 ## Lab Environment
-
 - Rocky Linux
 - CentOS
 - Windows 10 (Host)
+- Windows 11
 - VirtualBox
 - Visual Studio Code
 - Git Bash
 
 ### Infrastructure
-
 - 1 Control Node --> Rocky Linux
 - 4 Multiple CentOS Linux managed nodes
+- Windows 10 (Host)
+- 1 Windows 11 client
 - SSH key authentication
 - Ansible inventory and playbooks
 
 ## GitHub Profile
-
 - https://github.com/elioperez
 
 ## Contact
-
-- LinkedIn: Add your LinkedIn profile URL here
+- LinkedIn: https://www.linkedin.com/in/eperezcalzadilla/
 - GitHub: https://github.com/elioperez

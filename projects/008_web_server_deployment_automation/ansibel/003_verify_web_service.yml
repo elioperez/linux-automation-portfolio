@@ -11,4 +11,4 @@
   - debug:
       msg:
       - " Host: {{ inventory_hostname }}"
-      - "Satatus: {{ apache.stdout }}"
+      - "Status: {{ apache.stdout }}"

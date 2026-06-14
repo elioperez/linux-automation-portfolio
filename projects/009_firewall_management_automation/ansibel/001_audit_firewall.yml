@@ -1,0 +1,14 @@
+---
+- name: Audit Firewall
+  hosts: servers
+  become: yes
+
+  tasks:
+  - name: Verify Firewall
+    shell: firewall-cmd --list-all
+    register: firewall
+
+  - debug:
+      msg:
+      - "Host: {{inventory_hostname}}"
+      - "{{firewall.stdout_lines}}"
