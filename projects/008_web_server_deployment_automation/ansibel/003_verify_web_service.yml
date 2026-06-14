@@ -1,0 +1,14 @@
+---
+- name: Verify Web Service
+  hosts: servers
+  become: yes
+
+  tasks:
+  - name: Check HTTP Service
+    shell: systemctl is-active httpd
+    register: apache
+
+  - debug:
+      msg:
+      - " Host: {{ inventory_hostname }}"
+      - "Satatus: {{ apache.stdout }}"

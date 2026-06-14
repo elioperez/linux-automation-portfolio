@@ -1,0 +1,12 @@
+---
+- name: Configure Firewall
+  hosts: servers
+  become: yes
+
+  tasks:
+  - name: Open HTTP port
+    firewalld:
+      service: http
+      permanent: yes
+      state: enabled
+      immediate: yes
