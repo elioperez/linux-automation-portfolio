@@ -19,6 +19,14 @@ The project also demonstrates how automation can improve troubleshooting, operat
 • Improve troubleshooting and incident response capabilities.
 • Reduce manual investigation effort.
 
+## Automation Tools & Execution Guide
+*Note: The following collection consists of legacy procedural scripts built during my initial Linux training phases to establish core system baselines:*
+* **`bash/001_monitoring-system.sh`**: Captures baseline CPU, memory, and storage utilization.
+* **`bash/002_check-critical-service.sh`**: Audits systemd unit statuses for essential daemons.
+* **`bash/003_full_system_healt_report.sh`**: Compiles core operating system telemetry.
+* **`bash/004_user_activity_report.sh`**: Tracks interactive shell sessions and logged-in user tokens.
+* **`bash/005_time_drift_incident.sh`**: Performs initial timestamp sweeps across managed hosts.
+
 ---
 
 ## Environment
